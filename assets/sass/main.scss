@@ -232,7 +232,9 @@
 
 		&.major {
 			margin: 0 0 (_size(element-margin) * 1.75) 0;
-
+			.no-border {
+				border-bottom: none;
+			}
 			h2, h3, h4, h5, h6 {
 				border-bottom: solid 2px _palette(border);
 				display: inline-block;
@@ -1832,4 +1834,9 @@
 
 	.black {
 		color: black;
+	}
+
+	.no-border {
+		border-color: transparent;
+		border-bottom: none;
 	}

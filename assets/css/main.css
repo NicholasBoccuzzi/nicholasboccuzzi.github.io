@@ -1624,6 +1624,9 @@
 			padding-bottom: 1em;
 			position: relative;
 		}
+		header.major h2.no-border {
+			border-bottom: none;
+		}
 
 			header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
 				content: '';
@@ -2033,8 +2036,8 @@
 			}
 
 				ul.icons.major li {
-					font-size: 20px;
-			    padding-right: 5em;
+					font-size: 30px;
+			    padding-right: 2em;
 				}
 
 					@media screen and (max-width: 736px) {
@@ -2641,7 +2644,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #eaeaea;
+			background-color: white;
 			color: black;
 		}
 
@@ -2799,7 +2802,7 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #eaeaea;
+			background-color: white;
 			color: black;
 		}
 
@@ -2954,7 +2957,8 @@
 
 		.wrapper.style4 {
 			background-color: transparent;
-	    margin: 0 10%;
+	    margin: 0 auto;
+			text-align:center;
 		}
 
 		.wrapper.style5 {
@@ -3473,7 +3477,7 @@
 			margin-left: -8.5em;
 			opacity: 1;
 			outline: 0;
-			padding-left: 0.225em;
+			padding-left: 1em;
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
@@ -3490,7 +3494,7 @@
 				content: '';
 				display: block;
 				height: 1.5em;
-				left: 50%;
+				left: 53%;
 				margin: 0 0 0 -0.75em;
 				position: absolute;
 				width: 1.5em;
@@ -3836,6 +3840,13 @@
 		font-weight: 700;
 	}
 
+	.white {
+		color: white;
+	}
+
+	.inline {
+		display: inline-block;
+	}
 	.colleges {
 		width: 200px;
 		height: 200px;
@@ -3843,15 +3854,52 @@
 	}
 
 	.picture-resize {
-		height: 200px;
-		width: 200px;
-		border-radius: 100px;
-		margin-bottom: 50px;
+		height: 300px;
+		width: 300px;
+		border-radius: 200px;
+		margin: 0 auto 50px auto;
 	}
 
 	.flex-col {
-		display: inline-flex;
+		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
 		align-content: center;
+	}
+
+	.underline {
+		text-decoration: underline;
+	}
+
+	.flex-row{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.about-me {
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto 50px auto;
+
+	}
+
+	.no-border {
+		border: none;
+		border-color: transparent;
+	}
+
+	.about-me-header {
+		max-width: 200px;
+		margin: 0 auto 0 auto;
+	}
+
+	.center {
+		align-content: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.small-padding {
+		padding-bottom: 20px;
 	}
