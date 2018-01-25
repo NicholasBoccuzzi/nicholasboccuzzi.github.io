@@ -1474,7 +1474,7 @@
 		color: #fff;
 		font-weight: 800;
 		letter-spacing: 0.225em;
-		line-height: 1em;
+		line-height: 1.5em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
 	}
@@ -3828,8 +3828,8 @@
 	}
 
 	.small-image {
-		width: 14px;
-		height: 14px;
+		width: 24px;
+		height: 24px;
 	}
 
 	.black {
