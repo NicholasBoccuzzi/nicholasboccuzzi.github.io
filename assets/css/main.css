@@ -2321,7 +2321,8 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #DB6C39 !important;
+				background-color: white !important;
+				color: black !important;
 			}
 
 			input[type="submit"].special:active,
@@ -3902,4 +3903,9 @@
 
 	.small-padding {
 		padding-bottom: 20px;
+	}
+
+	.inline-block-links{
+		display: inline-block;
+		margin: 0px 20px 20px 20px;
 	}
