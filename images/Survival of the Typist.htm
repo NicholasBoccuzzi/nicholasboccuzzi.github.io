@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///Users/NickyB/Desktop/JavascriptProject/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./Survival of the Typist_files/firebase.js"></script>
+    
+    <link rel="stylesheet" href="./Survival of the Typist_files/master.css">
+    <link href="./Survival of the Typist_files/css" rel="stylesheet">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script> -->
+    <link rel="stylesheet" href="./Survival of the Typist_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./Survival of the Typist_files/animate.min.css">
+    <title>Survival of the Typist</title>
+  </head>
+  <body>
+
+  <div class="flex-col nav-bar">
+    <div class="flex-row">
+      <div class="sound-button animated slideInRight">
+        <div class="flex-row">
+          <i class="fa fa-volume-up volume" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div id="title" class="animated zoomInDown">
+        <div class="title-text flex-row animated pulse infinite">
+        Survival
+        <div class="small-title-text flex-col">
+          <div>of</div> <div>the</div>
+        </div>
+        Typist
+        </div>
+      </div>
+
+      <div class="sound-button animated slideInRight">
+        <div class="flex-row">
+          <section class="flex-col">
+          <i class="fa fa-volume-up volume flipped" aria-hidden="true"></i>
+          <audio src="./audio/background.mp3" id="backgroundBeats" loop="true" type="audio/mpeg">
+          </audio>
+        </section></div>
+      </div>
+
+    </div>
+
+    <main class="game-container flex-row">
+      <div class="flex-col left-margin animated slideInLeft">
+        <section class="directions-container hover-click" id="switchDirections">
+          <div class="small-title-font">
+            Click to Switch Instructions
+          </div>
+          <section id="keyControls">
+            <div class="directions-title">
+              Key Controls
+            </div>
+            <div class="flex-row letter-container">
+              <div class="flex-col">
+                <div class="Letters">
+                  W
+                </div>
+                Up
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  S
+                </div>
+                Down
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  A
+                </div>
+                Left
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  D
+                </div>
+                Right
+              </div>
+            </div>
+            <div class="margin-bottom-directions">
+            OR
+            </div>
+            <div class="flex-row letter-container margin-bottom-directions">
+              <div class="flex-col">
+                <div class="Letters">
+                  <div class="fa fa-arrow-up">
+                  </div>
+                </div>
+                Up
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  <div class="fa fa-arrow-down">
+                  </div>
+                </div>
+                Down
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  <div class="fa fa-arrow-left">
+                  </div>
+                </div>
+                Left
+              </div>
+              <div class="flex-col">
+                <div class="Letters">
+                  <div class="fa fa-arrow-right">
+                  </div>
+                </div>
+                Right
+              </div>
+            </div>
+              <div class="flex-col margin-top-directions">
+                <div class="space-enter">
+                  Enter
+                </div>
+              <div class="inline-block margin-bottom-directions">
+                <div class="blue">Switch</div> Input</div>
+              </div>
+              <div class="flex-col">
+                <div class="space-enter">
+                  Space
+                </div>
+                <div class="margin-bottom-directions">
+                  Fire Blaster
+                </div>
+              </div>
+          </section>
+          <section class="how-to-play hide" id="howToPlay">
+            <div class="directions-title" id="howToPlay">
+              How To Play
+            </div>
+
+            <div class="directions-li">
+              Control the Square with W, A, S, D <br>or the direction arrows
+            </div>
+
+            <div class="directions-li">
+              Press Enter to switch between <div class="blue">Text Input</div>
+              and the  <div class="RedSquare"></div>Square.
+            </div>
+
+            <div class="directions-li">
+              Input a <div class="yellow"> Typist Command's</div> text
+               to perform its associated function.
+            </div>
+
+            <div class="directions-li">
+              EX: Type " rl " and press enter to reload the Square's ammo supply
+            </div>
+
+            <div class="directions-title" id="howToPlay">
+              Tips
+            </div>
+
+            <div class="directions-li">
+              Reload as often as possible
+            </div>
+
+            <div class="directions-li">
+              Destroy the Walls!
+            </div>
+
+            <div class="directions-li">
+              Destroy the Tris!
+            </div>
+
+            <div class="directions-li">
+              SURVIVE
+            </div>
+          </section>
+          <div class="small-title-font">
+            Click to Switch Instructions
+          </div>
+        </section>
+
+        <div class="flash-container shadow-left" id="leftbox">
+          <div id="flash" class="flash">
+          </div>
+        </div>
+      </div>
+      <div class="flex-col" id="gameContainer">
+        <div class="flex-col animated fadeIn">
+          <canvas id="survivalTypist" class="canvas" width="650" height="400">
+            <div class="white">
+              Hello
+            </div>
+          </canvas>
+          <div class="flex-row ui-containers" id="ui">
+            <div class="ui-li border-right flex-row">
+              Ammo: <div class="blue white" id="ammo">7</div>
+            </div>
+            <div class="ui-li border-right flex-row">
+              Shields: <div id="shield" class="shield-color">3</div>
+            </div>
+            <div class="ui-li border-right flex-row">
+              Bombs: <div id="bomb" class="bomb-color">3</div>
+            </div>
+            <div class="ui-li border-right flex-row">
+              Lives: <div id="lives">1</div>
+            </div>
+
+          </div>
+          <input class="keyboard-input" type="text" id="myInput" value="" placeholder="Press Enter to Switch to Text Input">
+        </div>
+      </div>
+
+        <div id="highScoreList" class="flex-col animated fadeIn hide">
+          <div class="high-score-list-container">
+            <ul class="high-score-list">
+
+            </ul>
+          </div>
+          <input class="keyboard-input" type="text" id="highScoreInput" value="" placeholder="ENTER YOUR INITALS">
+          
+        </div>
+
+
+
+      <div class="flex-col right-margin align-left animated slideInRight">
+
+        <section class="directions-container">
+          <div class="directions-title yellow">Typist's Commands</div>
+          <div class="flex-row">
+            <ul class="directions-list">
+              <div class="directions-li typist-title">Text</div>
+              <div class="typist-li">story</div>
+              <div class="typist-li">start</div>
+              <div class="typist-li">restart</div>
+              <div class="typist-li">revive</div>
+              <div class="typist-li">rl</div>
+              <div class="typist-li">reload</div>
+              <div class="typist-li">bomb</div>
+              <div class="typist-li">shield</div>
+              <div class="typist-li">tp</div>
+            </ul>
+
+            <ul class="directions-list">
+              <div class="directions-title directions-li">Function</div>
+              <div class="typist-li">Tell the Story</div>
+              <div class="typist-li">Start game</div>
+              <div class="typist-li">Restart game</div>
+              <div class="typist-li">Revive Red</div>
+              <div class="typist-li">Ammo = 7</div>
+              <div class="typist-li">Ammo = 14</div>
+              <div class="typist-li">Deploy bomb</div>
+              <div class="typist-li">Activate shield</div>
+              <div class="typist-li">Teleport</div>
+            </ul>
+
+          </div>
+        </section>
+
+        <div class="flash-container shadow-right" id="rightbox">
+          <div id="scoreBoard" class="flash">0</div>
+        </div>
+        <section class="flex-row icon">
+          <a class="white" href="https://www.linkedin.com/in/nicholas-r-boccuzzi/">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a class="white" href="https://www.github.com/NicholasBoccuzzi">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a class="white" href="http://www.nicholasboccuzzi.com/">
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+          </a>
+        </section>
+      </div>
+    </main>
+  </div>
+
+    <audio src="./audio/RandF.mp3" id="intro" preload="true" autoplay="true" loop="true">
+    <audio src="./audio/blaster.mp3" preload="true">
+    <audio src="./audio/emptyClip.mp3" preload="true">
+    <audio src="./audio/removeTriangle.mp3" preload="true">
+    <audio src="./audio/removeWall.mp3" preload="true">
+    <audio src="./audio/shield.mp3" preload="true">
+    <audio src="./audio/shieldRemove.mp3" preload="true">
+    <audio src="./audio/shutdown.mp3" preload="true">
+    <audio src="./audio/teleport.mp3" preload="true">
+    <audio src="./audio/bomb.mp3" preload="true">
+    <audio src="./audio/deathmarch.mp3" id="deathmarch" preload="true">
+    <audio src="./audio/story.mp3" id="storyMusic" preload="true">
+
+    <script type="application/javascript" src="./Survival of the Typist_files/keymaster.js"></script>
+    <script type="application/javascript" src="./Survival of the Typist_files/bundle.js"></script>
+    <script type="text/javascript" src="./Survival of the Typist_files/disable_paste.js"></script>
+    <script type="text/javascript" src="./Survival of the Typist_files/track_mouse.js"></script>
+
+    
+
+    
+  
+
+</audio></audio></audio></audio></audio></audio></audio></audio></audio></audio></audio></audio></body></html>
