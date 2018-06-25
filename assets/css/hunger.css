@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Pacifico";
+    src: url('../fonts/pacifico.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+body {
+  font-family: "Pacifico";
+}
+
+
+.hunger-main-title {
+  color: #FEDE32;
+  font-size: 100px;
+  font-weight: "700";
+  flex-wrap: 'wrap';
+  width: auto;
+  justify-content: "center";
+  text-shadow: -4px -4px 1px #F96D21, 0px 4px 1px rgb(0,0,0, .5);
+  text-align: "center";
+  font-family: 'Pacifico';
+}
+.main {
+  font-family: "Pacifico";
+  justify-content: center;
+  text-align: center;
+}
+
+.hunger-content-container {
+  max-width: 1366px;
+}
+
+.hunger-titles {
+  color: #FEDE32;
+  font-size: 100px;
+  font-weight: "700";
+  flex-wrap: 'wrap';
+  width: auto;
+  justify-content: "center";
+  text-shadow: -4px -4px 1px #F96D21, 0px 4px 1px rgb(0,0,0, .5);
+  text-align: "center";
+  font-family: 'Pacifico';
+}
+
+.body {
+  background: #40e1f9;
+}
+
+/*
+orange: #f96d21;
+yellow: '#FFFD47'
+blue: '#41CBFB'
+lightblue: #40e1f9
+red: #E22130
+green: #78F94C
+*/
