@@ -16,6 +16,9 @@ body {
   font-family: "Pacifico";
 }
 
+a {
+  text-decoration: none;
+}
 
 .hunger-main-title {
   text-align: center;
@@ -55,33 +58,68 @@ body {
   border-radius: 8px;
   width: 50%;
   box-shadow: 0px 1px 4px rgb(0,0,0, .5);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-margin-left {
   margin-left: 50px;
+}
+
+.additional-margin-right {
+  margin-right: 50px;
+}
+
+.additional-margin-top {
   margin-top: 100px;
 }
 
+.small-image {
+  width: 48px;
+  height: 48px;
+}
+
+.hunger-description-title {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #41CBFB;
+  line-height: 14px;
+  align-items: center;
+}
+
 .red {
-  color: red;
+  color: #E22130;
 }
 .hunger-description-text {
   font-family: 'Teko';
   font-size: 20px;
+  display: contents;
+  height: auto;
 }
 
 @media only screen and (max-width: 800px) {
   .hunger-flex-row {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center;
   }
 
 
   .hunger-description-container {
     margin-left: 0px;
+    margin-right: 0px;
     min-width: 380px;
+    margin-top: 20px;
+  }
+
+  .additional-margin-top {
+    margin-top: 50px;
   }
 }
-
 
 .hunger-titles {
   display: flex;
