@@ -31,6 +31,7 @@ a {
   text-shadow: 1px -4px 1px #F96D21, 0px 4px 1px rgb(254,222,50);
   text-align: "center";
   font-family: 'Pacifico';
+  margin-top: 50px;
 }
 
 .main {
@@ -132,6 +133,12 @@ a {
   flex-direction: column;
 }
 
+.hunger-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -143,12 +150,10 @@ a {
 
 .home-button-container {
   display: flex;
-  position: absolute;
-  top: 20px;
-  right: 50px;
   background: white;
   padding: 5px 10px;
   border-radius: 10px;
+  margin: 0px 10px;
 }
 
 .home-button-text {
