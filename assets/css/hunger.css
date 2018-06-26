@@ -45,6 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
 }
 .hunger-flex-row {
   display: flex;
@@ -135,8 +136,40 @@ a {
   align-items: center;
 }
 
+.larger-font {
+  font-size: 80px;
+}
+
 .body {
   background: #40e1f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.hunger-video-list-item {
+  background: black;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 140px;
+  margin: 100px 10px;
 }
 
 /*
