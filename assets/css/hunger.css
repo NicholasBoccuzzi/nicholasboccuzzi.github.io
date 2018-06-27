@@ -220,6 +220,14 @@ a {
 
 }
 
+.width-100 {
+  width: 100%;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
 /*
 orange: #f96d21;
 yellow: '#FFFD47'
