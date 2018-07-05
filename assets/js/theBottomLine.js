@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fetchMenuTickers(),
     fetch(api).then((response) => { response.json().then((response) => {
     let result = parseData(response);
+    switchData(result, true);
     window.setTimeout(()=>{
-      switchData(result, true);
       hideLoader();
     }, 2000);
   });}).then(() => {fetchStockData(currentCompanies[0])})
@@ -162,7 +162,6 @@ const switchData = function(result, bool) {
     d3.select("#titleContainer").attr("class", "title")
   }
   d3.select("#companyTitle").text(result.companyName)
-  d3.select("#content").attr("class", "content-container");
   d3.select("#companyInfoContainer").attr("class", "default-info-container")
   d3.select("#companyArrow").attr("class", "fa fa-angle-right default-arrow");
   d3.select("#ciwebsite").text(result.website).attr("href", result.website);
@@ -183,10 +182,10 @@ const fetchNewData = function(input) {
     currentCompanies.push(input),
     fetch(createCompanyApi(input)).then((response) => { response.json().then((response) => {
       let result = parseData(response);
+      switchData(result);
         window.setTimeout(() => {
-          switchData(result);
           hideLoader();
-        }, 1000)
+        }, 2000)
       })
     }).then(fetchStockData(input))
   )
@@ -247,6 +246,7 @@ const parseStockData = function(data) {
 }
 
 const hideLoader = function () {
+  d3.select("#content").attr("class", "content-container");
   d3.select("#loader").attr("class", "loader hide");
 }
 
