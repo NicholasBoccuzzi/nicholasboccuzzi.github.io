@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     fetchMenuTickers(),
     fetch(api).then((response) => { response.json().then((response) => {
     let result = parseData(response);
-    window.setTimeout(() => {switchData(result)}, 300)
+    window.setTimeout(() => {switchData(result)}, 500)
   });}).then(() => {fetchStockData(currentCompanies[0])})/* --- fetch Stock Data goes here*/
   )
 });
@@ -167,7 +167,7 @@ const fetchNewData = function(input) {
     currentCompanies.push(input),
     fetch(createCompanyApi(input)).then((response) => { response.json().then((response) => {
       let result = parseData(response);
-        window.setTimeout(() => {switchData(result)}, 300)
+        window.setTimeout(() => {switchData(result)}, 500)
       })
     }).then(fetchStockData(input))
   )
