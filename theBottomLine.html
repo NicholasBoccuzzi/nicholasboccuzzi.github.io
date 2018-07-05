@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Scheherazade" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/theBottomLineMain.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body class="flex-row fullscreen">
+    <div id="menuOffclick" class="menu-offclick hide">
+    </div>
+    <section id="menuContainer" class="default-menu start-menu">
+      <div class="menu-icon-container">
+        <i class="fas fa-bars menu-icon" name="toggleMenuButton"></i>
+      </div>
+      <div class="flex-column menu-item-container">
+        <div class="menu-text-container">
+          <input type="text" id="textInput" placeholder="Ticker" class= "text-input" value="" id="textInput"></input>
+        </div>
+        <div class="text-submit-container">
+          <button type="submit" id="textSubmit" class="text-submit-button">Submit</button>
+        </div>
+        <div id="tickerListContainer" data=0 class="ticker-list-container">
+
+        </div>
+      </div>
+    </section>
+
+    <main id="main" class="main-container hide">
+      <i class="fas fa-bars menu-icon menu-page-icon" name="toggleMenuButton"></i>
+        <section class="title-container">
+          <div  class="title">
+            The Bottom Line
+          </div>
+        </section>
+      </section>
+      <div class="content-container">
+        <section class="info-container flex-row width-onehundred">
+          <div class="arrow-container noselect no-pointer">
+            <div class="info-title">
+              Current Company:
+            </div>
+          </div>
+
+          <div id="companyTitle" class="">
+          </div>
+        </section>
+        <section class="info-container">
+          <div id="companyInfo" class="arrow-container noselect">
+            <div class="info-title">
+              Company Information
+            </div>
+            <i id="companyArrow" class="fa fa-angle-right default-arrow"></i>
+          </div>
+          <div id="companyInfoContainer" class="default-info-container">
+            <main class="company-info-padding flex-col">
+              <section class="company-info-row">
+                <div class="flex-col company-info-50">
+                  <div class="ci-title">
+                    Company
+                  </div>
+                  <div id="cicompany" class="company-info-tags ci-top-info">
+                  </div>
+                </div>
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    Ticker
+                  </div>
+                  <div id="citicker" class="company-info-tags ci-top-info">
+                  </div>
+                </div>
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    Website
+                  </div>
+                  <a id="ciwebsite" class="company-info-tags link-color">
+                  </a>
+                </div>
+              </section>
+              <section class="company-info-row">
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    CEO
+                  </div>
+                  <div id="ciCEO" class="company-info-tags">
+                  </div>
+                </div>
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    Sector
+                  </div>
+                  <div id="cisector" class="company-info-tags">
+                  </div>
+                </div>
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    IssueType
+                  </div>
+                  <div id="ciIssueType" class="company-info-tags">
+                  </div>
+                </div>
+                <div class="flex-col company-info-25">
+                  <div class="ci-title">
+                    Exchange
+                  </div>
+                  <div id="ciexchange" class="company-info-tags">
+                  </div>
+                </div>
+              </section>
+              <section class="company-info-row">
+                <div class="flex-col company-info-50">
+                  <div class="ci-title">
+                    Tags
+                  </div>
+                  <div id="citags" class="company-info-tags">
+                  </div>
+                </div>
+                <div class="flex-col company-info-50">
+                  <div class="ci-title">
+                    Description
+                  </div>
+                  <div id="cidescription" class="company-info-description">
+                  </div>
+                </div>
+              </section>
+            </main>
+          </div>
+        </section>
+        <section class="graph-container">
+          <div id="stockInfo" class="arrow-container noselect">
+            <div class="info-title">
+              Stock Chart
+            </div>
+            <i id="stockArrow" class="fa fa-angle-right open-arrow"></i>
+          </div>
+          <main id="stockInfoContainer" class="default-info-container graph grow-graph">
+            <div>
+              <svg id="svg" viewBox="0 0 750 750" preserveAspectRatio="xMidYMid meet"
+               class="graph-abs"></svg>
+           </div>
+          </main>
+        </section>
+      </div>
+    </main>
+    <main id="loader" class="loader">
+      <i class="fas fa-dollar-sign"></i>
+    </main>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="assets/js/theBottomLine.js"></script>
+  </body>
+</html>
