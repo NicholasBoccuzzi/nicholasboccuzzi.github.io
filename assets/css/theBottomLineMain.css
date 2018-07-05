@@ -1,14 +1,8 @@
-@font-face {
-  font-family: 'MissDaisy';;
-  src: url('../fonts/MissDaisy.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 100;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 body {
   height: 100%;
   position: relative;
@@ -101,18 +95,18 @@ table {
 .title-text {
   font-size: 50px;
   text-align: center;
-  font-family: 'Scheherazade', serif;
+  font-family: 'Quantify', serif;
 }
 
 .loader {
   position: absolute;
-  top: 30vh;
-  left: 50%;
+  font-family: "Oswald";
+  top: 45vh;
+  left: 45%;
   right: 0px;
   bottom: 0px;
-  color: green;
-  font-size: 80px;
-  animation: elastic .6s linear infinite;
+  font-size: 50px;
+  animation: elastic 1s linear infinite;
 }
 
 @keyframes elastic {
@@ -315,10 +309,6 @@ table {
   height:100%;
   background: #f7f7f7;
   font-family: 'Oswald', sans-serif;
-}
-
-.hide {
-  display: none;
 }
 
 .arrow-container {
@@ -630,7 +620,7 @@ table {
 }
 
 .width-onehundred {
-  width: 100%;
+  width: calc(100% - 100px);
 }
 
 .flex-row {
@@ -638,15 +628,82 @@ table {
   flex-direction: row;
 }
 
+.title {
+  font-family: "MissDaisy";
+  font-size: 50px;
+  position: relative;
+}
+
+.title-animation {
+  font-family: "MissDaisy";
+  font-size: 50px;
+  animation: titleFadeIn .5s linear;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.black-line-abs {
+  font-family: "MissDaisy";
+  font-size: 100px;
+  position: absolute;
+  top: -35px;
+  left: 150px;
+}
+
+.show-black-line {
+  position: absolute;
+  background: white;
+  width: 0px;
+  height: 30px;
+  right: 0px;
+  top: 45px;
+  animation: showBlackLine 1.5s ease-in;
+}
+
+@keyframes showBlackLine {
+  0% {
+    width: 600px;
+  }
+
+  50% {
+    width: 600px;
+  }
+
+  100% {
+    width: 0px;
+  }
+}
+
+.current-company-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (max-width: 900px) {
+    .current-company-flex-row {
+      flex-direction: column;
+    }
+
     .title-text {
-      font-size: 25px;
+      font-size: 50px;
       position: relative;
       left: auto;
       top: auto;
       right: auto;
       bottom: auto;
       margin-top: 0px;
+      align-self: center;
     }
 
     .menu-page-icon {
@@ -707,11 +764,50 @@ table {
       left: 5%;
       position: absolute;
     }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .title-animation {
+      font-size: 20px;
+    }
+
+    .show-black-line {
+      height: 15px;
+      width: 0px;
+      right: 0px;
+      top: 20px;
+    }
+
+    .black-line-abs {
+      font-family: "MissDaisy";
+      font-size: 40px;
+      position: absolute;
+      top: -10px;
+      left: 50px;
+    }
+
+    @keyframes showBlackLine {
+      0% {
+        width: 150px;
+      }
+
+      100% {
+        width: 0px;
+      }
+    }
+
+    .loader {
+      font-size: 30px;
+      width:100%;
+      margin: auto;
+    }
 }
 
-.title {
-  font-family: MissDaisy;
-  font-size: 50px;
+
+.hide {
+  display: none;
 }
 
 /*

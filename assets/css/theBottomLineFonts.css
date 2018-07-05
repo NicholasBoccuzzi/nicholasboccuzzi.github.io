@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'MissDaisy';
+  src: url('../fonts/MissDaisy.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Quantify";
+  src: url('../fonts/Quantify.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

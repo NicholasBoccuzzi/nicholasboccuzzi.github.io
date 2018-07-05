@@ -58,13 +58,26 @@ document.getElementsByName("toggleMenuButton").forEach((element) => {element.add
 });
 
 
+
+/* Error I ran into that was messing up my animations:
+Having a function that switches classes -- in this case it was switchData --
+disables the animations from performing. Because of this, the animations tied to the
+classes that were added using d3 would not perform. The solution was to create the simulated
+250 ms delay with a function that didn't do anything and then add the actual function after the wait.
+Just kidding, the function that doesn't do anything doesn't stop the other function from happening,
+so I am going to separate the class change into a new function and adjust the animation.
+*/
 document.addEventListener("DOMContentLoaded", (event) => {
   return (
     fetchMenuTickers(),
     fetch(api).then((response) => { response.json().then((response) => {
     let result = parseData(response);
-    window.setTimeout(() => {switchData(result)}, 500)
-  });}).then(() => {fetchStockData(currentCompanies[0])})/* --- fetch Stock Data goes here*/
+    window.setTimeout(()=>{
+      switchData(result, true);
+      hideLoader();
+    }, 2000);
+  });}).then(() => {fetchStockData(currentCompanies[0])})
+
   )
 });
 
@@ -134,21 +147,24 @@ const toggleMenu = function() {
 
 }
 
+const titleFadeIn = function () {
+  d3.select("#titleContainer").attr("class", "title-animation");
+}
+
 
 /*
 Used to switch the data currently on the screen with the loaded information
 During the switch, I switch back to the loading screen and ensure that the company
 information tab is closed while also switching to the new information
 */
-const switchData = function(result) {
+const switchData = function(result, bool) {
+  if (!bool) {
+    d3.select("#titleContainer").attr("class", "title")
+  }
+  d3.select("#companyTitle").text(result.companyName)
+  d3.select("#content").attr("class", "content-container");
   d3.select("#companyInfoContainer").attr("class", "default-info-container")
   d3.select("#companyArrow").attr("class", "fa fa-angle-right default-arrow");
-  d3.select("#main").attr("class", "main-container");
-  d3.select("#loader").attr("class", "loader hide");
-  d3.select("#companyTitle")
-  .text(result.companyName)
-  .attr("class", "title-text")
-
   d3.select("#ciwebsite").text(result.website).attr("href", result.website);
   d3.select("#cicompany").text(result.companyName);
   d3.select("#citags").text(result.tags);
@@ -167,7 +183,10 @@ const fetchNewData = function(input) {
     currentCompanies.push(input),
     fetch(createCompanyApi(input)).then((response) => { response.json().then((response) => {
       let result = parseData(response);
-        window.setTimeout(() => {switchData(result)}, 500)
+        window.setTimeout(() => {
+          switchData(result);
+          hideLoader();
+        }, 1000)
       })
     }).then(fetchStockData(input))
   )
@@ -194,7 +213,8 @@ const fetchMenuTickers = function() {
 }
 
 const hideInfo = function () {
-  d3.select("#main").attr("class", "main-container hide");
+  d3.select("#content").attr("class", "content-container hide");
+  d3.select("titleContainer").attr("class", "title");
   d3.select("#loader").attr("class", "loader");
 }
 
@@ -224,6 +244,10 @@ const parseStockData = function(data) {
   }
 
   return stockArr;
+}
+
+const hideLoader = function () {
+  d3.select("#loader").attr("class", "loader hide");
 }
 
 const createStockApi = function(company, timeframe) {

@@ -4,6 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Scheherazade" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/theBottomLineFonts.css">
     <link rel="stylesheet" href="assets/css/theBottomLineMain.css">
     <meta charset="utf-8">
     <title></title>
@@ -23,28 +24,32 @@
           <button type="submit" id="textSubmit" class="text-submit-button">Submit</button>
         </div>
         <div id="tickerListContainer" data=0 class="ticker-list-container">
-
         </div>
       </div>
     </section>
 
-    <main id="main" class="main-container hide">
+    <main class="main-container">
       <i class="fas fa-bars menu-icon menu-page-icon" name="toggleMenuButton"></i>
         <section class="title-container">
-          <div class="title">
+          <div id="titleContainer" class="title-animation">
             The Bottom Line
+            <div class="black-line-abs">
+              ]
+            </div>
+            <div class="show-black-line">
+
+            </div>
           </div>
         </section>
-      </section>
-      <div class="content-container">
-        <section class="info-container flex-row width-onehundred">
+      <div id="content" class="content-container hide">
+        <section class="info-container current-company-flex-row width-onehundred">
           <div class="arrow-container noselect no-pointer">
             <div class="info-title">
               Current Company:
             </div>
           </div>
 
-          <div id="companyTitle" class="">
+          <div id="companyTitle" class="title-text">
           </div>
         </section>
         <section class="info-container">
@@ -144,10 +149,12 @@
         </section>
       </div>
     </main>
-    <main id="loader" class="loader">
-      <i class="fas fa-dollar-sign"></i>
-    </main>
 
+    <main id="loader" class="loader">
+      <div class="">
+        Loading...
+      </div>
+    </main>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="assets/js/theBottomLine.js"></script>
   </body>
