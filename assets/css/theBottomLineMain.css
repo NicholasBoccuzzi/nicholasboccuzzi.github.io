@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MissDaisy';;
-  src: url('assets/fonts/MissDaisy.ttf') format('truetype');
+  src: url('../fonts/MissDaisy.ttf') format('truetype');
   font-style: normal;
   font-weight: 100;
 }
