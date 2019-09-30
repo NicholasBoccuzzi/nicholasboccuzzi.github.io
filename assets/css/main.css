@@ -3905,3 +3905,18 @@
 		display: inline-block;
 		margin: 0px 20px 20px 20px;
 	}
+
+	.multipleImages {
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		margin: auto;
+		padding-top: 50px;
+	}
+
+	.whitefox {
+		max-width: 300px;
+		align-self: 'center';
+		margin: auto;
+		padding: 20px;
+	}
