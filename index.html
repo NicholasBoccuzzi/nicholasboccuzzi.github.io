@@ -12,7 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -83,13 +84,13 @@
 									<br/>
 									<br/>
 									<div class="black about-me">
-										I am a Software Engineer currently based in New York City developing mobile applications at Univision. I have experience developing web applications that utilize the JavaScript, Ruby, C#, and Python languages. I also have a background in Business Management, Administration and Entrepreneurship
+										I am a Software Engineer based in New York City with 5 years of experience developing websites and mobile applications that primarily utilize TypeScript, React Native, React, Apollo GraphQL and Redux!
 										<br/>
 										<br/>
-										Programming is my calling and passion. I spend most of my free time learning new technologies for web and mobile development, building VR experiences with Unity, and experimenting with AR.
+										Programming is my calling and passion. In my free time, I experiment with new technologies, learn design patterns and create videos that help teach thousands of developers on my YouTube channel: iHeartGameDev.
 										<br/>
 										<br/>
-										When my hands are off the keyboard, you can find me leading fitness classes as a SoulCycle Instructor.
+										When my hands are off the keyboard, you can find me long-distance running in Central Park.
 									</div>
 								</div>
 							</header>
@@ -100,6 +101,20 @@
 
 				<!-- Two -->
 				<section id="two" class="spotlight">
+					<div class="multipleImages">
+						<div class="image imagePadding"><img src="images/tradewing.png" alt="" /></div>
+						<div class="image imagePadding"><img src="images/tradewingVideo.png" alt="" /></div>
+					</div>
+					<div class="content">
+						<h2>Tradewing</h2><br />
+						<h1>TypeScript, React Native, Apollo GraphQL, Google Firebase, Datadog, LogRocket</h1>
+						<p>Tradewing is the leading community and video platform for associations designed to drive member engagement. Users of the mobile app are met with personalized feeds of their association and can interact with content by liking, commenting and/or sharing posts, or create new posts to engage with their communities. Video conferencing connects thousands of members of each association in scheduled registerable events, and direct communication between members is made possible through the app's built-in messaging system. The flagship mobile app launched in July 2022 and in less than 6 months increased Tradewing's frequency of usage (DAU/MAU) by 46%.</p>
+						<a href="https://play.google.com/store/apps/details?id=com.tradewingmobile&hl=en_US&gl=US"
+						class="button special inline-block-links">Google Play</a>
+						<a href="https://apps.apple.com/us/app/tradewing/id1593491610"
+						class="button special inline-block-links">App Store</a>
+				</section>
+				<section class="spotlight">
 					<div class="multipleImages">
 						<div class="image imagePadding"><img src="images/tudn.jpeg" alt="" /></div>
 						<div class="image imagePadding"><img src="images/noticias.jpeg" alt="" /></div>
@@ -118,7 +133,7 @@
 					<div class="content">
 						<h2>iHeartGameDev - YouTube Channel</h2><br />
 						<h1>C#, Unity</h1>
-						<p>iHeartGameDev is a channel completely focused on my passion for game development! Here I share in-depth tutorials on complex concepts to help thousands of developers learn to make games! With 6,500+ subscribers and 200,000 views in just a few short months, this channel has become my favorite hobby to explore during free time.</p>
+						<p>iHeartGameDev is a channel all about game development! Here I share in-depth tutorials breaking down complex engineering concepts into digestible content for aspiring developers! Each video helps up-level thousands of engineers on their development journeys! With 46,500+ subscribers and 2,000,000 views, this channel has become my favorite hobby to explore during my free time.</p>
 						<a href="https://youtube.com/iHeartGameDev" class="button special inline-block-links">Check It Out!</a>
 				</section>
 				<section class="spotlight">
@@ -137,7 +152,7 @@
 						<h2>White Fox Scooters</h2><br />
 						<h1>JavaScript, React Native, Google Firebase, Google Maps, Google Places</h1>
 						<p>White Fox Scooters is a mobile app akin to Bird and Citibike allowing for scooter rentals around the NYC area!</p>
-						<a href="https://play.google.com/store/apps/details?id=com.opolislabs.whitefox&hl=en_US"
+						<a href="https://play.google.com/store/apps/details?id=com.whitefox.app&hl=en_US&gl=US"
 						class="button special inline-block-links">Live</a>
 					</div>
 				</section>
@@ -162,8 +177,8 @@
 							<h2>Launchpad</h2><br />
 							<h1>JavaScript, React, Redux, Ruby, Rails, jQuery, HTML, CSS</h1>
 							<p>A feature complete replica of Kickstarter.com. Users are able to sign in/out/up, create and update projects, back other user's projects, and search through all projects that pass the "Live" specifications.</p>
-							<a href="https://thelaunchpad.herokuapp.com/#/"
-								class="button special inline-block-links">Live</a>
+							<!-- <a href="https://thelaunchpad.herokuapp.com/#/"
+								class="button special inline-block-links">Live</a> -->
 							<a href="https://github.com/NicholasBoccuzzi/Launchpad"
 								class="button special inline-block-links">GitHub</a>
 						</div>
@@ -259,34 +274,43 @@
 					<div class="inner">
 
 						<header class="major">
-							<h2 class="black">Languages, Libraries and Frameworks<br /></h2>
-							<p></p>
+							<h3 class="black">Languages, Libraries and Frameworks<br /></h2>
 						</header>
-						<ul class="icons major">
+						<ul class="icons">
+							<li><i class="devicon-typescript-plain colored"></i> <span class="label">TypeScript</span></span></li>
+							<li><i class="devicon-react-plain colored"></i> <span class="label">React Native</span></span></li>
+							<li><i class="devicon-graphql-plain colored"></i> <span class="label">GraphQL</span></span></li>
+							<li><img src="images/apollo.png" class="small-image"></img><span class="label">Apollo</span></span></li>
+							<li><i class="devicon-firebase-plain"></i> <span class="label">Firebase</span></span></li>
+						</ul>
+						<ul class="icons">
 							<li><i class="devicon-javascript-plain colored"></i> <span class="label">JavaScript</span></span></li>
-							<li><i class="devicon-ruby-plain colored"></i> <span class="label">Ruby</span></span></li>
-							<li><i class="devicon-rails-plain colored"></i> <span class="label">Rails</span></span></li>
-							<li><i class="devicon-csharp-line colored"></i> <span class="label">C#</span></span></li>
+							<li><i class="devicon-nodejs-plain colored"></i> <span class="label">nodejs</span></span></li>
 							<li><i class="devicon-react-plain colored"></i> <span class="label">React</span></span></li>
 							<li><img src="images/redux.jpg" class="small-image"></img> <span class="label">Redux</span></span></li>
+							<li><i class="devicon-git-plain colored"></i> <span class="label">git</span></span></li>
 						</ul>
-						<ul class="icons major">
+						<ul class="icons">
+							<li><i class="devicon-csharp-line colored"></i> <span class="label">C#</span></span></li>
+							<li><i class="devicon-unity-original"></i> <span class="label">Unity</span></span></li>
 							<li><i class="devicon-html5-plain colored"></i> <span class="label">HTML5</span></span></li>
 							<li><i class="devicon-css3-plain colored"></i> <span class="label">CSS3</span></span></li>
-							<li><i class="devicon-python-plain colored"></i> <span class="label">Python</span></span></li>
-							<li><i class="devicon-jquery-plain colored"></i> <span class="label">jQuery</span></span></li>
-							<li><i class="devicon-postgresql-plain colored"></i> <span class="label">PostgreSQL</span></span></li>
 						</ul>
-						<ul class="icons major">
-							<li><i class="devicon-git-plain colored"></i> <span class="label">git</span></span></li>
+						<ul class="icons">
+							<li><i class="devicon-rails-plain colored"></i> <span class="label">Rails</span></span></li>
+							<li><i class="devicon-jquery-plain colored"></i> <span class="label">jQuery</span></span></li>
+							<li><i class="devicon-mongodb-plain colored"></i> <span class="label">MongoDB</span></span></li>
+							<li><i class="devicon-python-plain colored"></i> <span class="label">Python</span></span></li>
+						</ul>
+						<ul class="icons">
 							<li><i class="devicon-webpack-plain colored"></i> <span class="label">Webpack</span></span></li>
 							<li><i class="devicon-heroku-plain colored"></i> <span class="label">Heroku</span></span></li>
 							<li><i class="devicon-amazonwebservices-plain colored"></i> <span class="label">Amazon Web Services</span></span></li>
 						</ul>
-						<ul class="icons major">
-							<li><i class="devicon-mongodb-plain colored"></i> <span class="label">MongoDB</span></span></li>
+						<ul class="icons">
+							<li><i class="devicon-ruby-plain colored"></i> <span class="label">Ruby</span></span></li>
 							<li><i class="devicon-php-plain colored"></i> <span class="label">PHP</span></span></li>
-							<li><i class="devicon-nodejs-plain colored"></i> <span class="label">nodejs</span></span></li>
+							<li><i class="devicon-postgresql-plain colored"></i> <span class="label">PostgreSQL</span></span></li>
 							<li><i class="devicon-google-plain colored"></i> <span class="label">Google Services</span></span></li>
 						</ul>
 					</div>
